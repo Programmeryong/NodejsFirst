@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改数据</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style type="text/css">
+    	ul{
+    		list-style: none;
+    	}
+    	#disabledTextInput{
+    		border: 0;
+    	}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">	
+			<h3>修改数据</h3>	
+			</div>
+			<div class="col-md-6 col-md-offset-3">
+				<form method="post" action="/update">
+					<div class="form-group">
+						<h4>用户编号：<input id="disabledTextInput"  type="text" name="id" value="{{data.id}}"></h4>
+					</div>
+					<div class="form-group">
+					    <label for="exampleInputEmail1">账号</label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" name="username" value="{{data.p_name}}">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="exampleInputPassword1">密码</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" name="userpassword" value="{{data.p_pow}}"">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="exampleInputEmail1">手机</label>
+					    <input type="text" class="form-control" id="exampleInputEmail1" name="userpho" value="{{data.p_pho}}">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="exampleInputPassword1">邮箱</label>
+					    <input type="text" class="form-control" id="exampleInputPassword1" name="useremail" value="{{data.p_em}}">
+				  	</div>
+				  	<div class="form-group">
+				  		<input type="submit" value="确定" class="btn btn-danger">
+				  		<input type="submit"  value="取消" class="btn btn-warning">
+				  	</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
